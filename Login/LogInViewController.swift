@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController , UITextFieldDelegate {
    
     @IBAction func closeLogInPopUp(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -19,12 +19,21 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        emailTextField.layer.cornerRadius = 20
-        passwordTextField.layer.cornerRadius = 20
+   
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        print("next button pressed")
+        if (textField === emailTextField)
+        {
+            emailTextField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        }else{
+            passwordTextField.resignFirstResponder()
+        }
+        return true
     }
+    
 
     @IBAction func LogInPressed(_ sender: Any) {
     
@@ -47,10 +56,20 @@ class LogInViewController: UIViewController {
             } else {
                 print("Log in successful!")
                  self.view.endEditing(true)
-                
+            
 //                SVProgressHUD.dismiss()
             }
         }
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        emailTextField.layer.cornerRadius = 20
+        passwordTextField.layer.cornerRadius = 20
+        emailTextField.returnKeyType = .next
+        passwordTextField.returnKeyType = .done
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
 }

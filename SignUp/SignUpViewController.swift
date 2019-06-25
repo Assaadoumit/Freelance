@@ -14,8 +14,9 @@ class SignUpViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var SignUpButton: UIButton!
     @IBOutlet weak var signUpButtonInside: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
+    
+    
     @IBAction func SignUpWithPhoneNumber(_ sender: Any) {
         signUpPopUp.isHidden = true
         self.shouldPerformSegue(withIdentifier: "SignUpPhoneNumber", sender: self)
@@ -78,6 +79,19 @@ class SignUpViewController: UIViewController , UITextFieldDelegate {
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        print("next button pressed")
+        if (textField === emailTextField)
+        {
+            emailTextField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        }else{
+            passwordTextField.resignFirstResponder()
+        }
+        return true
+    }
+    
     
 
 }
