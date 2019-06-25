@@ -227,7 +227,7 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="LogInPressed:" destination="3i1-i1-91a" eventType="touchUpInside" id="Xgd-wW-sLH"/>
+                                    <action selector="LogInPressed:" destination="3i1-i1-91a" eventType="touchUpInside" id="W0V-ZR-SgA"/>
                                     <action selector="SignUpButtonPressed:" destination="dZL-kM-JTS" eventType="touchUpInside" id="0ic-rl-fuS"/>
                                     <action selector="SignUpPopUpPressed:" destination="5vq-Ge-IfJ" eventType="touchUpInside" id="MBf-Vj-C4j"/>
                                 </connections>
@@ -238,6 +238,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Hbb-qv-0RI" id="jQH-Bm-gkn"/>
+                        <outlet property="logIn" destination="0yG-IN-KTR" id="dFH-5M-2Om"/>
                         <outlet property="passwordTextField" destination="BjJ-bi-3qe" id="NVF-Ed-GmH"/>
                     </connections>
                 </viewController>
@@ -266,10 +267,92 @@
                                     <action selector="closeSignUpPopUp:" destination="dZL-kM-JTS" eventType="touchUpInside" id="Oqe-WA-4BV"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-aC-2aF" userLabel="InsertPhoneView">
+                                <rect key="frame" x="46" y="79" width="290" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="A4a-8Z-9jg">
+                                        <rect key="frame" x="-6" y="0.0" width="296" height="127"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usn-ud-LrC">
+                                        <rect key="frame" x="91" y="16" width="195" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+961" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzn-BT-H1M">
+                                        <rect key="frame" x="47" y="16" width="40" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconfinder_Flag_of_Lebanon_96231" translatesAutoresizingMaskIntoConstraints="NO" id="dIE-E9-DQq">
+                                        <rect key="frame" x="3" y="16" width="36" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S07-76-HCa">
+                                        <rect key="frame" x="3" y="62" width="279" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendPhoneNumber:" destination="lIy-37-AW4" eventType="touchUpInside" id="V1t-bH-wZW"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-BE-cBE" userLabel="CodeVerficationView">
+                                        <rect key="frame" x="0.0" y="-4" width="290" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="BoO-y0-qel">
+                                                <rect key="frame" x="0.0" y="-1" width="290" height="136"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WW-td-8Yq">
+                                                <rect key="frame" x="3" y="82" width="279" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Verify">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendPhoneNumber:" destination="lIy-37-AW4" eventType="touchUpInside" id="X1m-e3-oHG"/>
+                                                    <action selector="verifyButtonPressed:" destination="lIy-37-AW4" eventType="touchUpInside" id="tcU-9H-lGo"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfq-Xw-955">
+                                                <rect key="frame" x="31" y="25" width="227" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BsS-hp-7e3"/>
                     </view>
+                    <connections>
+                        <outlet property="InsertCodeView" destination="5qL-BE-cBE" id="vyi-Hm-gCy"/>
+                        <outlet property="InsertPhoneView" destination="0ZL-aC-2aF" id="CXc-sH-TC9"/>
+                        <outlet property="codeTextField" destination="Bfq-Xw-955" id="KSU-fB-Jl9"/>
+                        <outlet property="phoneNumberTextField" destination="usn-ud-LrC" id="zuo-du-IVN"/>
+                        <outlet property="senButton" destination="S07-76-HCa" id="dSB-Hl-j6J"/>
+                        <outlet property="verifyButton" destination="1WW-td-8Yq" id="Zk4-ME-tQJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQ9-nr-bPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,6 +362,7 @@
     <resources>
         <image name="background" width="3376" height="6000"/>
         <image name="close" width="100" height="100"/>
+        <image name="iconfinder_Flag_of_Lebanon_96231" width="128" height="128"/>
         <image name="icons8-apple-logo-filled-500" width="500" height="500"/>
         <image name="icons8-facebook-filled-50" width="50" height="50"/>
     </resources>

@@ -10,17 +10,14 @@ import UIKit
 import Firebase
 
 class LogInViewController: UIViewController , UITextFieldDelegate {
-   
+    @IBOutlet weak var logIn: UIButton!
+    
     @IBAction func closeLogInPopUp(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
          self.view.endEditing(true)
     }
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
-   
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         print("next button pressed")
@@ -70,6 +67,7 @@ class LogInViewController: UIViewController , UITextFieldDelegate {
         passwordTextField.returnKeyType = .done
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        logIn.layer.cornerRadius = 20
     }
     
 }
