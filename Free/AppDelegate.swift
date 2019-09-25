@@ -8,18 +8,70 @@
 
 import UIKit
 import Firebase
+//import FacebookCore
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    //"AllIndustriesViewController")  SignUpViewController
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        return true
-    }
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
+        let isVerified :Bool = UserDefaults.standard.bool(forKey: "isVerified")
+        if isVerified == true{
+            let vc = MyProfileViewController()
+            UserDefaults.standard.set(true, forKey: "isVerified")
+            print("is Verified ")
+        }else{
+            UserDefaults.standard.set(false, forKey: "isVerified")
+        }
 
+        let isUserLoggedIn:Bool = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+    
+        if(isUserLoggedIn == false) {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            // create view controllers from storyboard
+            // Interface Builder -> Identitiy Inspector -> Storyboard ID
+            // Set up the Tab Bar Controller to have two tabs
+            let viewController  = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+            
+            
+            
+            window?.rootViewController = viewController
+            window?.makeKeyAndVisible()
+            
+        }else {
+            print("is logged in")
+            let vc = SignUpPhoneNumberViewController()
+            if vc.phoneNumberTextField != nil {
+                print("\(String(describing: vc.phoneNumberTextField)) signed in")
+            }else{
+                print("phone number not avialble")
+            }
+        let vc1 = SignUpViewController()
+            if vc1.emailTextField != nil {
+                print("\(String(describing: vc1.emailTextField)) signed in")
+            }else{
+                print("email not availble")
+            }
+        }
+        
+            return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication , annotation : annotation)
+    }
+    
+    
+    //"AllIndustriesViewController"
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -41,6 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
 
 
 }

@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		431295FA0CF1A0FCE5079967 /* Pods_Free.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C22402AD1CFC3D9150EC7067 /* Pods_Free.framework */; };
+		960A447D22F2F18D00E40D22 /* TableViewCell1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A447B22F2F18C00E40D22 /* TableViewCell1TableViewCell.swift */; };
+		960A447E22F2F18D00E40D22 /* TableViewCell1TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960A447C22F2F18C00E40D22 /* TableViewCell1TableViewCell.xib */; };
+		960A448522F2FB7600E40D22 /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A448322F2FB7600E40D22 /* TableViewCell2.swift */; };
+		960A448622F2FB7600E40D22 /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960A448422F2FB7600E40D22 /* TableViewCell2.xib */; };
+		966FAE8022C2693A00F9322A /* AllIndustriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FAE7F22C2693A00F9322A /* AllIndustriesViewController.swift */; };
+		966FAE8222C385EC00F9322A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FAE8122C385EC00F9322A /* MyProfileViewController.swift */; };
+		966FAE8422C38BDC00F9322A /* ExpertProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FAE8322C38BDC00F9322A /* ExpertProfileViewController.swift */; };
+		966FAE8622C4C10000F9322A /* OTPVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FAE8522C4C0FC00F9322A /* OTPVerifyViewController.swift */; };
+		966FAE8922C4EA6700F9322A /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FAE8822C4EA6600F9322A /* UITabBarController.swift */; };
+		966FAE8B22C5497E00F9322A /* ProfessionalsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FAE8A22C5497E00F9322A /* ProfessionalsListTableViewController.swift */; };
+		966FAE8D22C6088A00F9322A /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966FAE8C22C6088A00F9322A /* EditProfileViewController.swift */; };
+		967C93D022F85F7700C9731E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C93CF22F85F7700C9731E /* GalleryViewController.swift */; };
 		96BB576422C2183D004EC5B0 /* SignUpPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB576322C2183D004EC5B0 /* SignUpPhoneNumberViewController.swift */; };
 		96BB576622C21B4D004EC5B0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BB576522C21B4D004EC5B0 /* LogInViewController.swift */; };
 		96D7414A22BCE16D0030CAFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D7414922BCE16D0030CAFA /* AppDelegate.swift */; };
@@ -20,6 +32,18 @@
 
 /* Begin PBXFileReference section */
 		650CFF5698A2F94F22DB968C /* Pods-Free.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Free.debug.xcconfig"; path = "Target Support Files/Pods-Free/Pods-Free.debug.xcconfig"; sourceTree = "<group>"; };
+		960A447B22F2F18C00E40D22 /* TableViewCell1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1TableViewCell.swift; sourceTree = "<group>"; };
+		960A447C22F2F18C00E40D22 /* TableViewCell1TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell1TableViewCell.xib; sourceTree = "<group>"; };
+		960A448322F2FB7600E40D22 /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
+		960A448422F2FB7600E40D22 /* TableViewCell2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
+		966FAE7F22C2693A00F9322A /* AllIndustriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllIndustriesViewController.swift; sourceTree = "<group>"; };
+		966FAE8122C385EC00F9322A /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		966FAE8322C38BDC00F9322A /* ExpertProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpertProfileViewController.swift; sourceTree = "<group>"; };
+		966FAE8522C4C0FC00F9322A /* OTPVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyViewController.swift; sourceTree = "<group>"; };
+		966FAE8822C4EA6600F9322A /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
+		966FAE8A22C5497E00F9322A /* ProfessionalsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalsListTableViewController.swift; sourceTree = "<group>"; };
+		966FAE8C22C6088A00F9322A /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		967C93CF22F85F7700C9731E /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		96BB576322C2183D004EC5B0 /* SignUpPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		96BB576522C21B4D004EC5B0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		96D7414622BCE16D0030CAFA /* Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Free.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +145,7 @@
 			children = (
 				96D7416722BCFE5C0030CAFA /* SignUpViewController.swift */,
 				96BB576322C2183D004EC5B0 /* SignUpPhoneNumberViewController.swift */,
+				966FAE8522C4C0FC00F9322A /* OTPVerifyViewController.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -128,6 +153,11 @@
 		96D7415F22BCE1EC0030CAFA /* Industries */ = {
 			isa = PBXGroup;
 			children = (
+				966FAE8A22C5497E00F9322A /* ProfessionalsListTableViewController.swift */,
+				960A447B22F2F18C00E40D22 /* TableViewCell1TableViewCell.swift */,
+				960A447C22F2F18C00E40D22 /* TableViewCell1TableViewCell.xib */,
+				960A448322F2FB7600E40D22 /* TableViewCell2.swift */,
+				960A448422F2FB7600E40D22 /* TableViewCell2.xib */,
 			);
 			path = Industries;
 			sourceTree = "<group>";
@@ -135,6 +165,8 @@
 		96D7416022BCE1F90030CAFA /* MyProfile */ = {
 			isa = PBXGroup;
 			children = (
+				966FAE8122C385EC00F9322A /* MyProfileViewController.swift */,
+				966FAE8C22C6088A00F9322A /* EditProfileViewController.swift */,
 			);
 			path = MyProfile;
 			sourceTree = "<group>";
@@ -142,6 +174,8 @@
 		96D7416122BCE20A0030CAFA /* IndustriePage */ = {
 			isa = PBXGroup;
 			children = (
+				966FAE7F22C2693A00F9322A /* AllIndustriesViewController.swift */,
+				966FAE8822C4EA6600F9322A /* UITabBarController.swift */,
 			);
 			path = IndustriePage;
 			sourceTree = "<group>";
@@ -149,6 +183,8 @@
 		96D7416222BCE21A0030CAFA /* ProfessionProfile */ = {
 			isa = PBXGroup;
 			children = (
+				966FAE8322C38BDC00F9322A /* ExpertProfileViewController.swift */,
+				967C93CF22F85F7700C9731E /* GalleryViewController.swift */,
 			);
 			path = ProfessionProfile;
 			sourceTree = "<group>";
@@ -213,9 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960A447E22F2F18D00E40D22 /* TableViewCell1TableViewCell.xib in Resources */,
 				96D7415422BCE1870030CAFA /* LaunchScreen.storyboard in Resources */,
 				96D7416622BCFACB0030CAFA /* GoogleService-Info.plist in Resources */,
 				96D7415122BCE1870030CAFA /* Assets.xcassets in Resources */,
+				960A448622F2FB7600E40D22 /* TableViewCell2.xib in Resources */,
 				96D7414F22BCE16D0030CAFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +292,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Free/Pods-Free-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
@@ -263,6 +306,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -280,10 +328,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966FAE8D22C6088A00F9322A /* EditProfileViewController.swift in Sources */,
+				967C93D022F85F7700C9731E /* GalleryViewController.swift in Sources */,
+				960A447D22F2F18D00E40D22 /* TableViewCell1TableViewCell.swift in Sources */,
+				966FAE8222C385EC00F9322A /* MyProfileViewController.swift in Sources */,
+				966FAE8922C4EA6700F9322A /* UITabBarController.swift in Sources */,
+				966FAE8B22C5497E00F9322A /* ProfessionalsListTableViewController.swift in Sources */,
+				966FAE8022C2693A00F9322A /* AllIndustriesViewController.swift in Sources */,
 				96BB576422C2183D004EC5B0 /* SignUpPhoneNumberViewController.swift in Sources */,
 				96D7416822BCFE5C0030CAFA /* SignUpViewController.swift in Sources */,
+				966FAE8422C38BDC00F9322A /* ExpertProfileViewController.swift in Sources */,
 				96BB576622C21B4D004EC5B0 /* LogInViewController.swift in Sources */,
 				96D7414A22BCE16D0030CAFA /* AppDelegate.swift in Sources */,
+				960A448522F2FB7600E40D22 /* TableViewCell2.swift in Sources */,
+				966FAE8622C4C10000F9322A /* OTPVerifyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

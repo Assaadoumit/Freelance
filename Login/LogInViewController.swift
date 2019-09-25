@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class LogInViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var logIn: UIButton!
@@ -33,10 +34,12 @@ class LogInViewController: UIViewController , UITextFieldDelegate {
     
 
     @IBAction func LogInPressed(_ sender: Any) {
-    
+        let userDefault = UserDefaults.init()
+    SVProgressHUD.show()
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             
             if error != nil {
+                SVProgressHUD.dismiss()
                 print(error!)
                 let alertController = UIAlertController(title: "Error", message: "Invalid Account", preferredStyle: .alert)
                 
@@ -47,14 +50,15 @@ class LogInViewController: UIViewController , UITextFieldDelegate {
                 }
                 alertController.addAction(cancelAction)
                 self.present(alertController, animated: true, completion: nil)
-//                SVProgressHUD.showInfo(withStatus: "error logging in")
-//                SVProgressHUD.dismiss()
                 
             } else {
+                SVProgressHUD.dismiss()
                 print("Log in successful!")
-                 self.view.endEditing(true)
-            
-//                SVProgressHUD.dismiss()
+                self.view.endEditing(true)
+                self.performSegue(withIdentifier: "AllIndustriesViewController", sender: self)
+                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                UserDefaults.standard.synchronize()
+
             }
         }
     }

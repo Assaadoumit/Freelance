@@ -8,25 +8,25 @@
 
 import UIKit
 import FirebaseAuth
+import SVProgressHUD
 
 class SignUpPhoneNumberViewController: UIViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var InsertCodeView: UIView!
+
     @IBOutlet weak var InsertPhoneView: UIView!
-    @IBOutlet weak var codeTextField: UITextField!
-    @IBOutlet weak var verifyButton: UIButton!
+   
+   
     @IBOutlet weak var senButton: UIButton!
     let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         phoneNumberTextField.layer.cornerRadius = 20
-        InsertCodeView.isHidden = true
+       
         InsertPhoneView.isHidden = false
-        codeTextField.layer.cornerRadius = 20
         senButton.layer.cornerRadius = 20
-        verifyButton.layer.cornerRadius = 20
+        
      
     }
     
@@ -44,40 +44,40 @@ class SignUpPhoneNumberViewController: UIViewController {
     
     
     @IBAction func sendPhoneNumber(_ sender: Any) {
+        if phoneNumberTextField.text?.isEmpty ?? true {
+            SVProgressHUD.showError(withStatus: "Enter a Valid Phone number")
+        }else{
+            SVProgressHUD.show()
         print("send button pressed")
          UserDefaults.init()
         
-        self.InsertCodeView.isHidden = false
-        let lebCountrycode = "+961"+phoneNumberTextField.text!
+   
+        let  lebCountrycode = "+961"+phoneNumberTextField.text!
+            
         var phoneNumber = lebCountrycode
-        
+            SVProgressHUD.dismiss()
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
             if error == nil{
-        
-                print(verificationID)
                 guard let verifyId = verificationID else {return}
-                self.userDefault.set(verifyId, forKey: "verificationID")
-                self.userDefault.synchronize()
+                UserDefaults.standard.set(true, forKey: "isUserLoggedIn")
+                UserDefaults.standard.set(lebCountrycode, forKey: "phoneNumber")
+                
+                UserDefaults.standard.synchronize()
+                self.performSegue(withIdentifier: "ToVerification", sender: self)
+                print(" veerification ID is \(verificationID)")
+                
                 
             }else{
                 print("unable to get secret verification code from firebase  :\(error?.localizedDescription)")
+                
+                SVProgressHUD.showError(withStatus: "Error Try Again")            }
             }
         }
       
     }
-    @IBAction func verifyButtonPressed(_ sender: Any) {
-        print("verify button pressed")
-        guard let otpCode = codeTextField.text else {return}
-        guard let verificationId = userDefault.string(forKey: "verificationID") else {return}
-        let credential = PhoneAuthProvider.provider().credential(withVerificationID: verificationId, verificationCode: otpCode)
-        Auth.auth().signInAndRetrieveData(with: credential) { (success, error) in
-            if error == nil {
-                print("success phone auth")
-            }else{
-                print("failes phone auth : \(error?.localizedDescription)")
-            }
-    }
-    
-    }
+//    let verificationID: String? = nil
+ 
 
+    
 }
+

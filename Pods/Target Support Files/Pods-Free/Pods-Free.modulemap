@@ -1,0 +1,6 @@
+framework module Pods_Free {
+  umbrella header "Pods-Free-umbrella.h"
+
+  export *
+  module * { export * }
+}
